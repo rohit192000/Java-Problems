@@ -3,6 +3,7 @@ import java.io.*;
 import java.util.*;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Collections;
 
 class Sort012{
     public static void main(String[] args){
@@ -41,7 +42,14 @@ class Sort012{
             temp.add(arr[i]);
         }
         // Sorting function to sort array
-        temp.sort(Comparator.naturalOrder());
+        
+        // one method to sort ArrayList
+        // temp.sort(Comparator.naturalOrder());
+
+
+        // Another method to sort using Collections.
+        Collections.sort(temp);
+
         // assigning sorted array list temp to array arr.
         for(int i = 0; i<arr.length; ++i){
             arr[i] = temp.get(i);
